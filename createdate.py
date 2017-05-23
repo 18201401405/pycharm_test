@@ -45,7 +45,11 @@ def genDataBase1(fileName, dataCount):
         mLine = "%i %s %s %s %d\n" % (i + 1, firstName, lastName, birthday, sex)
         outp.write(mLine)
         i += 1
- #       time.sleep(2)
+        # 每次循环都把数据输入到磁盘
+        outp.flush()
+        time.sleep(2)
+    # 如果没有调用flush函数，在调用write函数时，数据会先进入内存缓冲区
+    # 当内存缓冲区满或者调用clost函数后数据才会写入磁盘
     outp.close()
 
 

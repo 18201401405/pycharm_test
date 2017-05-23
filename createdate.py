@@ -45,7 +45,7 @@ def genDataBase1(fileName, dataCount):
         mLine = "%i %s %s %s %d\n" % (i + 1, firstName, lastName, birthday, sex)
         outp.write(mLine)
         i += 1
-        time.sleep(2)
+ #       time.sleep(2)
     outp.close()
 
 
